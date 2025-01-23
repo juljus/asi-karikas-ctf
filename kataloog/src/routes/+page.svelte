@@ -28,8 +28,11 @@
 			<img src="https://fakeimg.pl/2400x400" class="h-full w-64 object-cover" alt="" />
 			<div class="flex flex-row items-center justify-between bg-green-300 p-5">
 				<div>
-					<h3 class="text-lg font-semibold">CTF One</h3>
-					<p class="text-sm">Description for CTF One.</p>
+					<h3 class="text-lg font-semibold">Login bypass</h3>
+					<p class="text-sm">
+						<span class="font-semibold">Juhend:</span> Use weak or missing authentication checks so users
+						can gain access without valid credentials.
+					</p>
 				</div>
 				<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
 			</div>
@@ -37,24 +40,85 @@
 
 		<section class="flex flex-row items-center justify-between rounded bg-red-300 p-5 shadow">
 			<div>
-				<h3 class="text-lg font-semibold">CTF Two</h3>
-				<p class="text-sm">Description for CTF Two.</p>
+				<h3 class="text-lg font-semibold">SQL Injection</h3>
+				<p class="text-sm">
+					Allow raw inputs to reach the database without proper sanitization, enabling malicious
+					queries.
+				</p>
 			</div>
 			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
 		</section>
 
 		<section class="flex flex-row items-center justify-between rounded bg-yellow-300 p-5 shadow">
 			<div>
-				<h3 class="text-lg font-semibold">CTF Three</h3>
-				<p class="text-sm">Description for CTF Three.</p>
+				<h3 class="text-lg font-semibold">Weak Password Challenge</h3>
+				<p class="text-sm">Prompt users to brute force or guess trivial credentials.</p>
 			</div>
 			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
 		</section>
 
 		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
 			<div>
-				<h3 class="text-lg font-semibold">CTF Three</h3>
-				<p class="text-sm">Description for CTF Three.</p>
+				<h3 class="text-lg font-semibold">Admin Privilege Escalation</h3>
+				<p class="text-sm">Give standard users direct or indirect access to admin functionality.</p>
+			</div>
+			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
+		</section>
+
+		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+			<div>
+				<h3 class="text-lg font-semibold">XSS Challenge</h3>
+				<p class="text-sm">
+					Embed unsanitized user input into the page, letting the attacker inject scripts.
+				</p>
+			</div>
+			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
+		</section>
+
+		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+			<div>
+				<h3 class="text-lg font-semibold">Directory Traversal</h3>
+				<p class="text-sm">Permit users to request files outside the web root via crafted paths.</p>
+			</div>
+			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
+		</section>
+
+		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+			<div>
+				<h3 class="text-lg font-semibold">Ignored Validation</h3>
+				<p class="text-sm">
+					Omit or hide client-side checks, letting users bypass them to submit potentially harmful
+					data.
+				</p>
+			</div>
+			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
+		</section>
+
+		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+			<div>
+				<h3 class="text-lg font-semibold">Hidden Parameter Tampering</h3>
+				<p class="text-sm">
+					Place critical flags behind undisclosed form fields that can be modified.
+				</p>
+			</div>
+			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
+		</section>
+
+		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+			<div>
+				<h3 class="text-lg font-semibold">Open Redirect</h3>
+				<p class="text-sm">
+					Let attackers craft links that redirect to unexpected external sites by manipulating query
+					parameters.
+				</p>
+			</div>
+			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
+		</section>
+
+		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+			<div>
+				<h3 class="text-lg font-semibold">Cookie forging</h3>
+				<p class="text-sm">Accept tampered cookies to demonstrate improper session validation</p>
 			</div>
 			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
 		</section>
