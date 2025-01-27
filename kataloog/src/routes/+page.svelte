@@ -65,7 +65,7 @@
 			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
 		</section>
 
-		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+		<section class="flex flex-row items-center justify-between rounded bg-green-300 p-5 shadow">
 			<div>
 				<h3 class="text-lg font-semibold">XSS Challenge</h3>
 				<p class="text-sm">
@@ -75,7 +75,7 @@
 			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
 		</section>
 
-		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+		<section class="flex flex-row items-center justify-between rounded bg-red-300 p-5 shadow">
 			<div>
 				<h3 class="text-lg font-semibold">Directory Traversal</h3>
 				<p class="text-sm">Permit users to request files outside the web root via crafted paths.</p>
@@ -83,7 +83,7 @@
 			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
 		</section>
 
-		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+		<section class="flex flex-row items-center justify-between rounded bg-yellow-300 p-5 shadow">
 			<div>
 				<h3 class="text-lg font-semibold">Ignored Validation</h3>
 				<p class="text-sm">
@@ -104,7 +104,7 @@
 			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
 		</section>
 
-		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+		<section class="flex flex-row items-center justify-between rounded bg-green-300 p-5 shadow">
 			<div>
 				<h3 class="text-lg font-semibold">Open Redirect</h3>
 				<p class="text-sm">
@@ -115,7 +115,7 @@
 			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
 		</section>
 
-		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
+		<section class="flex flex-row items-center justify-between rounded bg-red-300 p-5 shadow">
 			<div>
 				<h3 class="text-lg font-semibold">Cookie forging</h3>
 				<p class="text-sm">Accept tampered cookies to demonstrate improper session validation</p>
