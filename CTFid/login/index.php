@@ -84,7 +84,7 @@
 
             if ($username === $admin_username && $password === $admin_password) {
                 echo '<p>Login successful. Welcome, Administrator!</p>';
-                echo '<p>Flag: CTF{always_chang3_y0ur_default_passw0rds}</p>';
+                echo '<p>CTF: always_chang3_y0ur_default_passw0rds</p>';
                 $loggedIn = true;
             } elseif ($username === $restrict_username && $password === $rectrict_password) {
                 echo '<p>Login successful. Welcome, restricted user!</p>';
