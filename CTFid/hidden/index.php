@@ -54,15 +54,19 @@
 <body>
     <?php
     $purchased = false;
+    $hind = 10;
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $hind = 10;
         $pakkumine = $_POST['pakkumine'];
         $kogus = $_POST['kogus'];
+        $hind = $_POST['hind'] == null ? 10 : $_POST['hind'];
+
         if ($pakkumine >= $hind - 3 && $kogus > 0) {
             $purchased = true;
-            echo "<h2>Ost edukas! Ostsite hinnaga: $hind</h2>";
+            $paris = $hind * $kogus;
+            echo "<h2>Ost edukas! Ostsite hinnaga: $paris</h2>";
         } else if ($hind == "0") {
-            echo "<h2>Ost edukas! Ostsite hinnaga: $hind</h2>";
+            echo "<h2>Ost edukas! Ostsite hinnaga: $paris</h2>";
             echo "<h2>CTF: said_tasuta_s4rgi!</h2>";
         } else {
             echo "<h2>Paku rohkem!</h2>";
@@ -76,7 +80,7 @@
                 <h2>Valge t-särk</h2>
 
                 <label for="hind">Hind:</label>
-                <input type="number" id="hind" name="hind" placeholder="<?php $hind ?>" readonly>
+                <input type="number" id="hind" name="hind" value="<?php $hind ?>" readonly>
 
                 <label for="pakkumine">Paku hind:</label>
                 <input type="number" id="pakkumine" placeholder="<?php $hind ?>" name="pakkumine">
