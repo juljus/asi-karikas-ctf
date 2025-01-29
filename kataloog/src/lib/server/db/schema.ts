@@ -2,9 +2,12 @@ import { mysqlTable, serial, text, int, varchar, datetime } from 'drizzle-orm/my
 
 export const user = mysqlTable('user', {
 	id: varchar('id', { length: 255 }).primaryKey(),
-	age: int('age'),
 	username: varchar('username', { length: 32 }).notNull().unique(),
-	passwordHash: varchar('password_hash', { length: 255 }).notNull()
+	passwordHash: varchar('password_hash', { length: 255 }).notNull(),
+	ctfDone0: int('ctf_done0').default(0),
+	ctfDone1: int('ctf_done1').default(0),
+	ctfDone2: int('ctf_done2').default(0),
+
 });
 
 export const session = mysqlTable('session', {
