@@ -28,13 +28,14 @@
 			<img src="https://fakeimg.pl/2400x400" class="h-full w-64 object-cover" alt="" />
 			<div class="flex flex-row items-center justify-between bg-green-300 p-5">
 				<div>
-					<h3 class="text-lg font-semibold">Login bypass</h3>
-					<p class="text-sm">
-						<span class="font-semibold">Juhend:</span> Use weak or missing authentication checks so users
-						can gain access without valid credentials.
+					<h3 class="text-lg font-semibold">Vaikimisi kasutaja paroolid</h3>
+					<p class="pr-1 text-sm">
+						<span class="font-semibold">Juhend:</span> Pead leidma Dahua turvakaamera administraatori
+						paroolid (ehk Administrator: 888888) ning logima sisse. Sain kunagi meie kooli IT asset management
+						süsteemi kasutades vaikimisi kasutaja parooli, mis ei olnud muudetud.
 					</p>
 				</div>
-				<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
+				<a href="/CTFid/login" class="btn rounded bg-gray-700 p-3 text-white">Sisene</a>
 			</div>
 		</section>
 
@@ -96,12 +97,13 @@
 
 		<section class="flex flex-row items-center justify-between rounded bg-blue-300 p-5 shadow">
 			<div>
-				<h3 class="text-lg font-semibold">Hidden Parameter Tampering</h3>
-				<p class="text-sm">
-					Place critical flags behind undisclosed form fields that can be modified.
+				<h3 class="text-lg font-semibold">Peidetud vormid</h3>
+				<p class="pr-1 text-sm">
+					<span class="font-semibold">Juhend:</span> Pead eemaldama "readonly" atribuudi hinna sisendilt
+					ning sisestama sinna 0, et t-särgi tasuta osta.
 				</p>
 			</div>
-			<a href="" class="btn rounded bg-gray-700 p-3 text-white">Enter</a>
+			<a href="/CTFid/hidden" class="btn rounded bg-gray-700 p-3 text-white">Sisene</a>
 		</section>
 
 		<section class="flex flex-row items-center justify-between rounded bg-green-300 p-5 shadow">

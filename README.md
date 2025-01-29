@@ -1,12 +1,20 @@
 # Asi Karikas CTF repo
 
-Jagatud kaheks osaks: `CTFid` ja `kataloog`. Esimene sisaldab CTFide lahendusi, teine on frontend CTFidele ligipääsuks (ssg site näiteks).
+Jagatud kaheks osaks: `CTFid` ja `kataloog`. Esimene sisaldab CTFide lahendusi, teine on frontend CTFidele ligipääsuks (ssg site).
 
-Kataloog võiks olla lihtne Svelte login, kus saab näha CTFide loetelu, lühikest kirjeldust ning võib-olla kui jõuab ka lihtne statistika, et kui palju CTFidest on tehtud.
+## Install
 
-CTFid teeks võib-olla lihtsalt PHP keeles vms, et mitte tech stack keeruliseks teha.
+```bash
+git clone https://github.com/juljus/asi-karikas-ctf.git
+cd asi-karikas-ctf
+docker compose build
+```
 
-Peaasi, et saame tehtud ülesande, mitte perfektne kvaliteet või CTFide, funktsioonide kvantiteet.
+## Run
+
+```bash
+docker compose up -d
+```
 
 ## CTFid
 
