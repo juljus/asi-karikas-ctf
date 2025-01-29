@@ -1,0 +1,47 @@
+services:
+  db:
+    image: mysql
+    container_name: ctf-db
+    environment:
+      MYSQL_ROOT_PASSWORD: mysecretpassword
+      MYSQL_DATABASE: local
+    ports:
+      - '3306:3306'
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+      interval: 5s
+      retries: 5
+
+  ctf-app:
+    build:
+      context: ./kataloog/
+      dockerfile: Dockerfile
+      network: host
+      args:
+        DATABASE_URL: "mysql://root:mysecretpassword@localhost:3306/local"
+    #ports:
+    #  - '4173:4173'
+    network_mode: "host"
+    environment:
+      DATABASE_URL: "mysql://root:mysecretpassword@localhost:3306/local"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  ctfid:
+    build:
+      context: ./CTFid/
+      dockerfile: Dockerfile
+    ports:
+      - '8090:80'
+    depends_on:
+      db:
+        condition: service_healthy
+volumes:
+  db-data:
+
+networks:
+  data:
+    driver: bridge
