@@ -26,6 +26,7 @@ services:
     #network_mode: "host"
     environment:
       DATABASE_URL: "mysql://root:mysecretpassword@db:3306/local"
+      ORIGIN: "http://localhost:4173"
     depends_on:
       db:
         condition: service_healthy

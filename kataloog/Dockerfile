@@ -11,7 +11,9 @@ RUN npm prune --production
 
 FROM node:22-alpine
 ARG DATABASE_URL
+ARG ORIGIN
 ENV DATABASE_URL $DATABASE_URL
+ENV ORIGIN $ORIGIN
 WORKDIR /app
 COPY --from=builder /app/build ./build
 COPY --from=builder /app/node_modules node_modules/
@@ -20,4 +22,4 @@ COPY package.json .
 EXPOSE 4173
 ENV NODE_ENV=production
 ENV PORT=4173
-CMD ["npm", "run", "preview"]
+CMD ["node", "build"]

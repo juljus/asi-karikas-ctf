@@ -46,7 +46,7 @@
 
 		<FeatureSection
 			title="SQL Injection"
-			description=""
+			description="Antud veebilehel on võimalik kontrollida oma kontojääki kukeseente ostmis ja müümis rakenduses. Sisselogimiseks pead sisestama oma kasutajanime ja parooli. Sinu sisendit aga ei puhastata nii et on võimalik teha SQL injection. Pannes kasutajanimeks näiteks  ' OR 1=1 --  viskab veebirakendus välja kasutajate andmebaasi sisu (mis on ka muidugi krüpteerimata), milles on ka kasutaja ASI_KARIKAS. Selle kontoga sisse logides leiadki flagi."
 			link="/CTFid/SQLinject"
 			colorClass="bg-red-300"
 		/>
