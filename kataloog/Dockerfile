@@ -8,6 +8,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 RUN npm prune --production
+RUN npm run db:push --force
 
 FROM node:22-alpine
 ARG DATABASE_URL

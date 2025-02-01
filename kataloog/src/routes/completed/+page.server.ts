@@ -17,23 +17,25 @@ export const actions = {
         
         const index = ctfCodes.indexOf(ctfCode as string);
         if (index >= 0) {
-            switch (index) {
+            try {
+                switch (index) {
 
-            case 0:
-                await db.update(user)
-                    .set({ ctfDone0: 1 })
-                    .where(user.id.eq(userId));
-                break;
-            case 1:
-                await db.update(user)
-                    .set({ ctfDone1: 1 })
-                    .where(user.id.eq(userId));
-                break;
-            case 2:
-                await db.update(user)
-                    .set({ ctfDone2: 1 })
-                    .where(user.id.eq(userId));
-                break;
+                case 0:
+                    await db.update(user)
+                        .set({ ctfDone0: 1 })
+                        .where(user.id.eq(userId));
+                    break;
+                case 1:
+                    await db.update(user)
+                        .set({ ctfDone1: 1 })
+                        .where(user.id.eq(userId));
+                    break;
+                case 2:
+                    await db.update(user)
+                        .set({ ctfDone2: 1 })
+                        .where(user.id.eq(userId));
+                    break;
+            }
             } catch (error) {
                 return fail(500, { message: 'Database error: ' +    String(error) });
             }

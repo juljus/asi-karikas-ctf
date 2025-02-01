@@ -8,12 +8,15 @@ Jagatud kaheks osaks: `CTFid` ja `kataloog`. Esimene sisaldab CTFide lahendusi, 
 git clone https://github.com/juljus/asi-karikas-ctf.git
 cd asi-karikas-ctf
 docker compose build
+docker compose up db
+cd kataloog
+npm run db:push
 ```
 
 ## Run
 
 ```bash
-docker compose up -d
+docker compose up -d --build
 ```
 
 ## CTFid

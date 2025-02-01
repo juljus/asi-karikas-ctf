@@ -4,8 +4,11 @@ WORKDIR /var/www/html
 
 COPY hidden /var/www/html/hidden
 COPY login /var/www/html/login
-COPY sql_inject /var/www/html/sql_inject
-COPY validation /var/www/html/validation
+COPY SQLinject /var/www/html/SQLinject
+COPY image /var/www/html/image
+COPY yt /var/www/html/yt
+COPY ctf.png /var/www/html/ctf.png
+#COPY chat /var/www/html/chat
 
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 

@@ -20,12 +20,12 @@ services:
       dockerfile: Dockerfile
       network: host
       args:
-        DATABASE_URL: "mysql://root:mysecretpassword@localhost:3306/local"
-    #ports:
-    #  - '4173:4173'
-    network_mode: "host"
+        DATABASE_URL: "mysql://root:mysecretpassword@db:3306/local"
+    ports:
+      - '4173:4173'
+    #network_mode: "host"
     environment:
-      DATABASE_URL: "mysql://root:mysecretpassword@localhost:3306/local"
+      DATABASE_URL: "mysql://root:mysecretpassword@db:3306/local"
     depends_on:
       db:
         condition: service_healthy
@@ -36,9 +36,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - '8090:80'
-    depends_on:
-      db:
-        condition: service_healthy
+
 volumes:
   db-data:
 
