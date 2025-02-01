@@ -1,5 +1,7 @@
 # Asi Karikas CTF repo
 
+Veebileht on saadaval: [ctf.hen.ee](https://ctf.hen.ee/)
+
 Jagatud kaheks osaks: `CTFid` ja `kataloog`. Esimene sisaldab CTFide lahendusi, teine on frontend CTFidele ligipääsuks (ssg site).
 
 ## Install
