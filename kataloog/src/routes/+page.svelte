@@ -43,35 +43,35 @@
 		<FeatureSection
 			title="Vaikimisi kasutaja paroolid"
 			description="Pead leidma Dahua turvakaamera administraatori paroolid (ehk Administrator: 888888) ning logima sisse. Sain kunagi meie kooli IT asset management süsteemi kasutades vaikimisi kasutaja parooli, mis ei olnud muudetud."
-			link="/CTFid/login"
+			link="http://localhost:8090/login"
 			colorClass="bg-green-300"
 		/>
 
 		<FeatureSection
 			title="SQL Injection"
 			description="Antud veebilehel on võimalik kontrollida oma kontojääki kukeseente ostmis ja müümis rakenduses. Sisselogimiseks pead sisestama oma kasutajanime ja parooli. Sinu sisendit aga ei puhastata nii et on võimalik teha SQL injection. Pannes kasutajanimeks näiteks  ' OR 1=1 --  viskab veebirakendus välja kasutajate andmebaasi sisu (mis on ka muidugi krüpteerimata), milles on ka kasutaja ASI_KARIKAS. Selle kontoga sisse logides leiadki flagi."
-			link="/CTFid/SQLinject"
+			link="http://localhost:8090/SQLinject"
 			colorClass="bg-red-300"
 		/>
 
 		<FeatureSection
 			title="Pildi üleslaadimine"
 			description="Pead üles laadima exe faili, lisades faili lõppu .png.exe"
-			link="/CTFid/image"
+			link="http://localhost:8090/image"
 			colorClass="bg-yellow-300"
 		/>
 
 		<FeatureSection
 			title="Peidetud vormid"
 			description="Pead eemaldama 'readonly' atribuudi hinna sisendilt ning sisestama sinna 0, et omale tasuta t-särgi osta."
-			link="/CTFid/hidden"
+			link="http://localhost:8090/hidden"
 			colorClass="bg-blue-300"
 		/>
 
 		<FeatureSection
-			title="Server Side Request Forgery probleem"
-			description="Pead sisestama URL sisendisse http://localhost:3000/ctf.png või http://127.0.0.1:3000/ctf.png, et leida flagi."
-			link="/CTFid/yt"
+			title="Server Side Request Forgery"
+			description="Pead sisestama URL sisendisse http://localhost:3000/ctf.png või http://127.0.0.1:3000/ctf.png, et leida pilt, kus on flag kirjutatud peale."
+			link="http://localhost:8090/yt"
 			colorClass="bg-purple-300"
 		/>
 	</div>

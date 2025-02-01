@@ -28,7 +28,7 @@
         }
 
         .form-container input[type="text"] {
-            width: 100%;
+            width: 97%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
@@ -67,8 +67,8 @@
                 if (str_contains($url, "youtube.com")) {
                     $url = str_replace("https://www.youtube.com/watch?v=", "https://img.youtube.com/vi/", $url);
                     $url .= "/sddefault.jpg";
-                    if (str_starts_with($url, "http://127.0.0.1/ctf.png") or str_starts_with($url, "http://localhost/ctf.png")) {
-                        echo "<img src='/ctf.png' alt='thumbnail'>";
+                    if (str_starts_with($url, "http://127.0.0.1:3000/ctf.png") or str_starts_with($url, "http://localhost:3000/ctf.png")) {
+                        echo "<img src='/yt/ctf.png' alt='thumbnail'>";
                     } else {
                         echo "<img src='$url' alt='thumbnail'>";
                     }
