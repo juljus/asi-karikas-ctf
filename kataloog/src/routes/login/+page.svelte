@@ -23,7 +23,7 @@
 			<button class="btn rounded bg-blue-800 p-4 text-white" formaction="?/register"
 				>Register</button
 			>
-			<button class="btn rounded bg-blue-800 p-4 px-6 text-white">Login</button>
+			<button class="btn rounded bg-blue-800 p-4 px-6 text-white" autofocus>Login</button>
 		</div>
 		<p style="color: red">{form?.message ?? ''}</p>
 	</form>

@@ -6,13 +6,13 @@ Jagatud kaheks osaks: `CTFid` ja `kataloog`. Esimene sisaldab CTFide lahendusi, 
 
 ## Install
 
+Muuda compose faili env väärtused vastavalt.
+
 ```bash
-git clone https://github.com/juljus/asi-karikas-ctf.git
-cd asi-karikas-ctf
-docker compose build
-docker compose up db
+docker compose up -d db
 cd kataloog
 npm run db:push
+docker compose build
 ```
 
 ## Run
@@ -22,6 +22,6 @@ docker compose up -d db
 docker compose up -d --build
 ```
 
-## CTFid
+CTFid on saadaval: [localhost:8090](http://localhost:8090/)
 
-[Google Docs](https://docs.google.com/document/d/1P4B2VI9qfXhXyMlchFt38WpdP6OBA5cSyffv5AL9Qrc/edit?tab=t.0)
+Kataloog on saadaval: [localhost:4173](http://localhost:4173/)

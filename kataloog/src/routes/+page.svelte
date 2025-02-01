@@ -5,12 +5,12 @@
 
 	let { data }: { data: PageServerData } = $props();
 
-	const countAllCTFs =
+	/* 	const countAllCTFs =
 		(data.user?.ctfsDone0 ?? 0) +
 		(data.user?.ctfsDone1 ?? 0) +
 		(data.user?.ctfDone2 ?? 0) +
 		(data.user?.ctfDone3 ?? 0) +
-		(data.user?.ctfDone4 ?? 0);
+		(data.user?.ctfDone4 ?? 0); */
 </script>
 
 <div class="min-h-screen bg-gray-100 p-6">
@@ -23,18 +23,21 @@
 	<div class="flex flex-col flex-wrap gap-4">
 		<div class="flex flex-row flex-wrap gap-5">
 			<div class="flex-grow rounded bg-white p-5 shadow">
-				<h2 class="text-xl font-semibold">Welcome, {data.user.username}!</h2>
-				<p class="text-m pt-1">Siin on loetelu tavalisematest vigadest veebirakendustes.</p>
+				<h2 class="text-xl font-semibold">Tere tulemast, {data.user.username}!</h2>
+				<p class="text-m pt-1">
+					Siin on loetelu tavalisematest vigadest veebirakendustes. Lahenda kõik, et läbida
+					koolitus.
+				</p>
 			</div>
-			<div class="inline-flex flex-grow flex-col rounded bg-white p-5 shadow sm:flex-grow-0">
+			<!-- 			<div class="inline-flex flex-grow flex-col rounded bg-white p-5 shadow sm:flex-grow-0">
 				<div class="">
 					<h2 class="text-xl font-semibold">CTFs done</h2>
-					<p class="text-3xl font-bold text-blue-600">0</p>
+					<p class="text-3xl font-bold text-blue-600">{ countAllCTFs }</p>
 				</div>
 				<a href="/completed" class="btn rounded bg-blue-600 p-2 text-center text-white"
 					>Check CTFs</a
 				>
-			</div>
+			</div> -->
 		</div>
 
 		<FeatureSection
@@ -68,7 +71,7 @@
 		<FeatureSection
 			title="Server Side Request Forgery probleem"
 			description="Pead sisestama URL sisendisse http://localhost:3000/ctf.png või http://127.0.0.1:3000/ctf.png, et leida flagi."
-			link="/CTFid/xss"
+			link="/CTFid/yt"
 			colorClass="bg-purple-300"
 		/>
 	</div>
