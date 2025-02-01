@@ -24,7 +24,7 @@
 		<div class="flex flex-row flex-wrap gap-5">
 			<div class="flex-grow rounded bg-white p-5 shadow">
 				<h2 class="text-xl font-semibold">Welcome, {data.user.username}!</h2>
-				<p class="text-m pt-1">Here you will find your next challenge.</p>
+				<p class="text-m pt-1">Siin on loetelu tavalisematest vigadest veebirakendustes.</p>
 			</div>
 			<div class="inline-flex flex-grow flex-col rounded bg-white p-5 shadow sm:flex-grow-0">
 				<div class="">

@@ -20,7 +20,7 @@ services:
       dockerfile: Dockerfile
       network: host
       args:
-        DATABASE_URL: "mysql://root:mysecretpassword@db:3306/local"
+        DATABASE_URL: "mysql://root:mysecretpassword@localhost:3306/local"
     ports:
       - '4173:4173'
     #network_mode: "host"

@@ -20,4 +20,4 @@ COPY package.json .
 EXPOSE 4173
 ENV NODE_ENV=production
 ENV PORT=4173
-CMD ["node", "build"]
+CMD ["npm", "run", "preview"]
