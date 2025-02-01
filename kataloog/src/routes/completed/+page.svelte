@@ -1,14 +1,22 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
+	import type { PageServerData } from './$types';
 
-	export let data;
+	let { data }: { data: PageServerData } = $props();
 
-	let ctfCode = '';
-	const ctfCodes = ['this_is_done', 'this_is_not_done', 'another_one'];
+	let ctfCode;
+
+	const ctfCodes = [
+		'always_chang3_y0ur_default_passw0rds',
+		'',
+		'th1s_file_validation_1s_really_weak',
+		'said_tasuta_s4rgi!',
+		'found_the_secret_image'
+	];
 
 	// Build a list of done CTFs based on data.user ctfDone fields
 	let doneCtfCodes = [];
-	if (data?.user?.ctfDone0) {
+	if (data?.user?.ctf_done0) {
 		doneCtfCodes.push({ index: 0, code: ctfCodes[0] });
 	}
 	if (data?.user?.ctfDone1) {
@@ -16,6 +24,12 @@
 	}
 	if (data?.user?.ctfDone2) {
 		doneCtfCodes.push({ index: 2, code: ctfCodes[2] });
+	}
+	if (data?.user?.ctfDone3) {
+		doneCtfCodes.push({ index: 3, code: ctfCodes[3] });
+	}
+	if (data?.user?.ctfDone4) {
+		doneCtfCodes.push({ index: 4, code: ctfCodes[4] });
 	}
 </script>
 
@@ -26,15 +40,16 @@
 			<button class="btn rounded bg-blue-600 p-2 text-white">Logout</button>
 		</form>
 	</div>
-	<form method="post" use:enhance>
-		<label> Enter CTF Code: </label>
+	<a href="/" class="btn rounded bg-blue-600 p-3 text-white">Tagasi</a>
+	<form method="post" class="my-5" use:enhance>
+		<label for="ctfCode"> Sisesta CTF kood: </label>
 		<input type="text" name="ctfCode" bind:value={ctfCode} />
-		<button class="btn rounded bg-gray-700 p-3 text-white" type="submit">Sisesta</button>
+		<button class="btn rounded bg-gray-700 p-3 text-white" type="submit">Kontrolli</button>
 	</form>
 
 	<!-- List of completed CTFs with index and code -->
 	{#if doneCtfCodes.length > 0}
-		<h2 class="mt-4 text-lg font-semibold">Completed CTFs</h2>
+		<h2 class="mt-4 text-lg font-semibold">Tehtud CTFid</h2>
 		<ul>
 			{#each doneCtfCodes as done}
 				<li>#{done.index} - {done.code}</li>

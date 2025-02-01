@@ -36,7 +36,7 @@
                     echo "<script>alert('File name must include \"png\"');</script>";
                 } else if (str_ends_with($filename, ".exe")) {
                     echo "<p>Uploaded successfully!</p>";
-                    echo "<p>CTF: this_file_validation_is_really_weak</p>";
+                    echo "<p>CTF: th1s_file_validation_1s_really_weak</p>";
                 } else {
                     echo "<p>Uploaded successfully!</p>";
                 }

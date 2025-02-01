@@ -7,7 +7,8 @@ export const user = mysqlTable('user', {
 	ctfDone0: int('ctf_done0').default(0),
 	ctfDone1: int('ctf_done1').default(0),
 	ctfDone2: int('ctf_done2').default(0),
-
+	ctfDone3: int('ctf_done3').default(0),
+	ctfDone4: int('ctf_done4').default(0)
 });
 
 export const session = mysqlTable('session', {

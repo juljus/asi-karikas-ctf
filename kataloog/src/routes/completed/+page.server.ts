@@ -1,8 +1,15 @@
 import { db } from '$lib/server/db';
 import { user } from '$lib/server/db/schema';
 import { fail } from '@sveltejs/kit';
+import { eq } from 'drizzle-orm';
 
-const ctfCodes = ['this_is_done', 'this_is_not_done', 'might_be_done'];
+	const ctfCodes = [
+		'always_chang3_y0ur_default_passw0rds',
+		'',
+		'th1s_file_validation_1s_really_weak',
+		'said_tasuta_s4rgi!',
+		'found_the_secret_image'
+	];
 
 export const actions = {
     default: async ({ request, locals }) => {
@@ -23,17 +30,27 @@ export const actions = {
                 case 0:
                     await db.update(user)
                         .set({ ctfDone0: 1 })
-                        .where(user.id.eq(userId));
+                        .where(eq(user.id, userId));
                     break;
                 case 1:
                     await db.update(user)
                         .set({ ctfDone1: 1 })
-                        .where(user.id.eq(userId));
+                        .where(eq(user.id, userId));
                     break;
                 case 2:
                     await db.update(user)
                         .set({ ctfDone2: 1 })
-                        .where(user.id.eq(userId));
+                        .where(eq(user.id, userId));
+                    break;
+                case 3:
+                    await db.update(user)
+                        .set({ ctfDone3: 1 })
+                        .where(eq(user.id, userId));
+                    break;
+                case 4:
+                    await db.update(user)
+                        .set({ ctfDone4: 1 })
+                        .where(eq(user.id, userId));
                     break;
             }
             } catch (error) {
