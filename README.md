@@ -18,6 +18,7 @@ npm run db:push
 ## Run
 
 ```bash
+docker compose up -d db
 docker compose up -d --build
 ```
 
