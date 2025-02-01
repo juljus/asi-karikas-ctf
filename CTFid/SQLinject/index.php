@@ -58,6 +58,17 @@
 			margin-bottom: 10px;
 			color: #bdc3c7;
 			font-size: 20px;}
+		.flag{
+			margin-top: 25px;
+			margin-bottom: 10px;
+			font-size: 30px;
+			animation: blink 0.5s infinite;
+		}
+		@keyframes blink {
+            0% {color: red;}
+            33% {color: green;}
+			66% {color: blue;}
+		}
 	</style>
 </head>
 <body>
@@ -73,14 +84,14 @@
 		// simuleerib seda et kasutaja sisselogimise andmed ja kontoseis jms on eraldi andmebaasis
 		// tuleb leida asi karika konto ja sellega sisse logida et saada kontoseis mis on ka flag
 		// andmed on ka muidugi krüpteerimata
-		$users0 = [["id" => 1, "username" => "admin", "password" => "12qwert34yuiop56"],
+		$users0 = [["id" => 1, "username" => "administraator", "password" => "12qwert34yuiop56"],
 					["id" => 2, "username" => "ristoriisikas", "password" => "kallisMalle45"],
 					["id" => 3, "username" => "juhan67", "password" => "mulgipuder1967"],
 					["id" => 4, "username" => "malleriisikas", "password" => "1980Endla12"],
 					["id" => 5, "username" => "ASI_KARIKAS", "password" => "EHK_KONTOJ22K_ON_FLAG???"],
 					["id" => 6, "username" => "miguel3", "password" => "awfaawgawgwag:q!"],
 					["id" => 7, "username" => "kerstike55", "password" => "rullbiskv11t"]];
-		$users = [["id" => 1, "username" => "admin", "password" => "12qwert34yuiop56", "balance" => "9999999"],
+		$users = [["id" => 1, "username" => "administraator", "password" => "12qwert34yuiop56", "balance" => "9999999"],
 					["id" => 2, "username" => "ristoriisikas", "password" => "kallisMalle45", "balance" => "15"],
 					["id" => 3, "username" => "juhan67", "password" => "mulgipuder1967", "balance" => "678"],
 					["id" => 4, "username" => "malleriisikas", "password" => "1980Endla12", "balance" => "-13"],
@@ -93,18 +104,22 @@
 
 	// fake sql inject ja sisse logimine parooliga
 		// näiteks tehakse selline query, et võtta selle nime ja parooliga kasutaja andmed andmebaasist, või vaadata kas neid üldse on olemas: 
-		//SELECT * FROM users WHERE username = $username AND password = $password
-		if (strpos($username, "' OR 1=1 --") !== false) { // simuleeritud SQL inject
+		//SELECT * FROM users WHERE username = '$username' AND password = '$password'
+		if (preg_match("/['\"] OR 1=1 --.*/i", $username) === 1) { // simuleeritud SQL inject
 			$username = "<pre>" . json_encode($users0, JSON_PRETTY_PRINT) . "</pre>";
-			echo "<div class=\"tx1\">Sisse logitud kasutajana <b>$username</b>!</div>"; // Justkui hakkaks kasutaja nime trükkima aga inject rikub selle ära ja väljastab andmed
-		} 
+			echo "<div class=\"tx1\">Sisse logitud kasutajana <b>$username</b>!</div>";} // Justkui hakkaks kasutaja nime trükkima aga inject rikub selle ära ja väljastab andmed 
 		else{ // korrektne sisselogimine kasutajanime ja parooliga 
 			foreach ($users as $user) {
 				if ($user['username'] === $username && $user['password'] === $password) { 
 					$bal;
 					foreach ($users as $user) { if ($user['username'] === $username){
 							$bal = (int)$user['balance']; }};
-					echo "<div class=\"tx1\">Sisse logitud kasutajana <b>$username</b>!<br> Sinu kontojääk on <b>$bal</b> eurot.</div>";
+					if($username === "ASI_KARIKAS"){
+						echo "<div class=\"flag\"><b>CTF_FLAG_LEITUD_!!!</b></div>";
+					}
+					else{
+						echo "<div class=\"tx1\">Sisse logitud kasutajana <b>$username</b>!<br> Sinu kontojääk on <b>$bal</b> eurot.</div>";
+					}
 					exit; 
 				}
 			}
